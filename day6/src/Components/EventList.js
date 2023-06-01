@@ -11,11 +11,11 @@ export default function EventList({events}) {
           <Link to={`/event-details/${event.id}`}>
             <h2>{event.title}</h2>
           </Link>
-          <p>{event.date}</p>
-          
+          <p>{event.date}</p>          
         </div>
 )
 })}
+<Link to={"/event-create"}><button>Click here to add data</button></Link>
     </div>
   );
 }

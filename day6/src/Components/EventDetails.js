@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 
 export default function EventDetails({events}) {
     const { eventId } = useParams();
-const event = events.find(event=> event.id === eventId);
+const event = events.find((event)=> event.id === eventId);
 if(!event)
 {
     return <div>Event not found according to given ID</div>
@@ -15,7 +15,7 @@ if(!event)
 <p>Time :{event.time}</p>
 <p>Location:{event.location}</p>
 <p>Description: {event.description}</p>
-<Link to={"/event-list"}><button>Back to EventList</button></Link>
+<Link to="/"><button>Back to EventList</button></Link>
     </div>
   )
 }
